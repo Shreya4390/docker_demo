@@ -41,26 +41,26 @@ npm install
 touch app.js
 
 #### Create Express app
-const express = require('express');
-const app = express();
-const router = express.Router();
-router.use(function (req, res, next) {
-    console.log('/' + req.method);
-    next();
-});
-const path = __dirname + '/views/';
-const port = 4000;
+const express = require('express');  <br />
+const app = express();  <br />
+const router = express.Router();  <br />
+router.use(function (req, res, next) {  <br />
+    console.log('/' + req.method);  <br />
+    next();  <br />
+});  <br />
+const path = __dirname + '/views/'; <br />
+const port = 4000;  <br />
 
-router.get('/message', function (req, res) {
-    res.json({msg:"Hello Sam welcome to team!"})
-});
+router.get('/message', function (req, res) {  <br />
+    res.json({msg:"Hello Sam welcome to team!"})  <br />
+});  <br />
 
-app.use(express.static(path));
-app.use('/', router);
+app.use(express.static(path));  <br />
+app.use('/', router);  <br />
 
-app.listen(port, function () {
-    console.log('Example app listening on port 4000!')
-})
+app.listen(port, function () {  <br />
+    console.log('Example app listening on port 4000!') <br />
+}) <br />
 
 #### If you followed the initial server setup tutorial in the prerequisites, you will have an active firewall permitting only SSH traffic. To permit traffic to  port 4000 run:
 sudo ufw allow 4000
