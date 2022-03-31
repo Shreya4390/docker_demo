@@ -41,7 +41,7 @@ npm install
 touch app.js
 
 #### Create Express app
-  const express = require('express');
+const express = require('express');
 const app = express();
 const router = express.Router();
 router.use(function (req, res, next) {
